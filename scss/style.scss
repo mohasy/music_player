@@ -1,2 +1,64 @@
 @charset "UTF-8";
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+figure {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(25deg, violet, pink);
+
+    h1 {
+        position: absolute;
+        font-size: 0px; //블럭 요소 간격 없앰
+        top: 7vh;
+        left: 4vw;
+    }
+
+    strong {
+        font: bold 36px/1.4 "arial";
+        color: #fff;
+        letter-spacing: 1px;
+        border: 1px solid aqua;
+    }
+
+    span {
+        font: 12px/1 "arial";
+        color: #fff;
+        opacity: 0.8;
+        letter-spacing: 1px;
+        border: 1px solid aqua;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 8vh;
+        right: 4vw;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    > p {
+        position: absolute;
+        bottom: 7vw;
+        left: 50%;
+        transform: translateX(-50%);
+        font: 12px/1 "arial";
+        color: #fff;
+        letter-spacing: 2px;
+        opacity: 0.8;
+    }
+}
