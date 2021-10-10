@@ -1,18 +1,5 @@
 @charset "UTF-8";
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-ul, ol {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
+@import "reset";
 
 figure {
     width: 100%;
@@ -32,7 +19,7 @@ figure {
         font: bold 36px/1.4 "arial";
         color: #fff;
         letter-spacing: 1px;
-        border: 1px solid aqua;
+        // border: 1px solid aqua;
     }
 
     span {
@@ -40,7 +27,7 @@ figure {
         color: #fff;
         opacity: 0.8;
         letter-spacing: 1px;
-        border: 1px solid aqua;
+        // border: 1px solid aqua;
     }
     
     .menu {
@@ -50,6 +37,8 @@ figure {
         font-size: 24px;
         color: #fff;
     }
+
+    @import "panel";
 
     > p {
         position: absolute;
