@@ -59,10 +59,56 @@ figure {
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
         opacity: 0.6;
         transform: scale(0.8);
-        transition: 1s; }
+        transition: 1s;
+        display: flex;
+        justify-content: center; }
+        figure section article .inner .pic {
+          width: 15vw;
+          height: 15vw;
+          position: relative; }
+          figure section article .inner .pic::before, figure section article .inner .pic::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: #333;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; }
+          figure section article .inner .pic::before {
+            transform: translateY(10%);
+            filter: blur(20px) brightness(1.6); }
       figure section article.on .inner {
         opacity: 0.9;
         transform: scale(1.1); }
+    figure section article:nth-of-type(1) .inner .pic::before,
+    figure section article:nth-of-type(1) .inner .pic::after {
+      background-image: url(../img/member1.jpg); }
+    figure section article:nth-of-type(2) .inner .pic::before,
+    figure section article:nth-of-type(2) .inner .pic::after {
+      background-image: url(../img/member2.jpg); }
+    figure section article:nth-of-type(3) .inner .pic::before,
+    figure section article:nth-of-type(3) .inner .pic::after {
+      background-image: url(../img/member3.jpg); }
+    figure section article:nth-of-type(4) .inner .pic::before,
+    figure section article:nth-of-type(4) .inner .pic::after {
+      background-image: url(../img/member4.jpg); }
+    figure section article:nth-of-type(5) .inner .pic::before,
+    figure section article:nth-of-type(5) .inner .pic::after {
+      background-image: url(../img/member5.jpg); }
+    figure section article:nth-of-type(6) .inner .pic::before,
+    figure section article:nth-of-type(6) .inner .pic::after {
+      background-image: url(../img/member6.jpg); }
+    figure section article:nth-of-type(7) .inner .pic::before,
+    figure section article:nth-of-type(7) .inner .pic::after {
+      background-image: url(../img/member7.jpg); }
+    figure section article:nth-of-type(8) .inner .pic::before,
+    figure section article:nth-of-type(8) .inner .pic::after {
+      background-image: url(../img/member8.jpg); }
   figure .btnPrev {
     width: 60px;
     height: 60px;
