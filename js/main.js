@@ -29,6 +29,20 @@ next.addEventListener("click", () => {
     activation();
 });
 
+//각 패널의 플레이 버튼 클릭시
+for(let el of list) {
+    let play = el.querySelector(".play");
+    let pause = el.querySelector(".pause");
+    let load = el.querySelector(".load");
+
+    play.addEventListener("click", e=> {
+        e.currentTarget.closest("article").querySelector(".pic").classList.add("on");
+    });
+    pause.addEventListener("click", e=> {
+        e.currentTarget.closest("article").querySelector(".pic").classList.remove("on");
+    });
+}
+
 //버튼 활성화 함수
 function activation() {
     for(let el of list){
