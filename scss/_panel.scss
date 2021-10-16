@@ -27,10 +27,14 @@ section {
             transform: scale(0.8);
             transition: 1s;
             display: flex; justify-content: center;
+            flex-wrap: wrap;
+            align-content: space-between;
 
             .pic {
                 width: 15vw; height: 15vw;
                 position: relative;
+                display: flex; justify-content: center;
+                align-items: center;
 
                 &::before, &::after {
                     content: "";
@@ -52,7 +56,56 @@ section {
                     transform: translateY(10%);
                     filter: blur(20px) brightness(1.6);
                 }
-              
+
+                .dot {
+                    width: 3vw; height: 3vw;
+                    border-radius: 50%;
+                    background: #fff;
+                    position: relative;
+                    z-index: 3;
+                    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .2);
+                }
+            }
+
+            .txt {
+                text-align: center;
+                position: relative;
+                z-index: 3;
+
+                h2 {
+                    font: bold 20px/1 "arial";
+                    color: #222;
+                    margin-bottom: 2vh;
+                }
+
+                p {
+                    font: 12px/1 "arial";
+                    color: #777;
+                    margin-bottom: 3vh;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    li {
+                        cursor: pointer;
+                        opacity: .6;
+                        transition: .5s;
+
+                        &.play {
+                            transform: scale(1.5); opacity: .9;
+                        }
+
+                        &:hover {
+                            transform: scale(1.5); opacity: .8;
+
+                            &.play {
+                                transform: scale(2); opacity: 1;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -64,6 +117,7 @@ section {
         }
     }
 
+    //반복을 돌면서 .pic의 before, after요소에 배경이미지 저장
     @for $i from 1 through 8 {
         article:nth-of-type(#{$i}) .inner .pic::before,
         article:nth-of-type(#{$i}) .inner .pic::after {

@@ -13,36 +13,26 @@ for(let i =0; i<len; i++){
     list[i].style.transform = `rotate(${deg*i}deg) translateY(-100vh)`;
 }
 
+//이전 버튼 클릭
 prev.addEventListener("click", () => {
     frame.style.transform = `rotate(${deg* ++num}deg)`;
-        //현재 순번이 0이 되면 마지막 순번으로 초기화
-        // if(active == 0) {
-        //     active = len-1;
-        //     //마지막 순번이 아니면 1씩 감소
-        // } else {
-        //     active--;
-        // }
 
-        (active == 0)  ? active = len-1 : active--;
-        for(let el of list){
-            el.classList.remove("on");
-        }
-        list[active].classList.add("on");
+    (active == 0)  ? active = len-1 : active--;
+    activation();
 });
 
+//다음 버튼 클릭
 next.addEventListener("click", () => {
     frame.style.transform = `rotate(${deg* --num}deg)`;
-    // //현재 순번이 마지막 순번이 되면 0으로 초기화
-    // if(active == len-1) {
-    //     active = 0;
-    //     //마지막 순번이 아니면 1씩 증가
-    // } else {
-    //     active++;
-    // }
 
     (active == len-1) ? active = 0 : active++;
+    activation();
+});
+
+//버튼 활성화 함수
+function activation() {
     for(let el of list){
         el.classList.remove("on");
     }
     list[active].classList.add("on");
-});
+}
