@@ -37,9 +37,16 @@ for(let el of list) {
 
     play.addEventListener("click", e=> {
         e.currentTarget.closest("article").querySelector(".pic").classList.add("on");
+        e.currentTarget.closest("article").querySelector("audio").play();
     });
     pause.addEventListener("click", e=> {
         e.currentTarget.closest("article").querySelector(".pic").classList.remove("on");
+        e.currentTarget.closest("article").querySelector("audio").pause();
+    });
+    load.addEventListener("click", e=> {
+        e.currentTarget.closest("article").querySelector(".pic").classList.add("on");
+        e.currentTarget.closest("article").querySelector("audio").load();
+        e.currentTarget.closest("article").querySelector("audio").play();
     });
 }
 
