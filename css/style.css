@@ -86,7 +86,12 @@ figure {
             background-size: cover; }
           figure section article .inner .pic::before {
             transform: translateY(10%);
-            filter: blur(20px) brightness(1.6); }
+            filter: blur(20px) brightness(1.6);
+            animation: rotation2 4s linear infinite;
+            animation-play-state: paused; }
+          figure section article .inner .pic::after {
+            animation: rotation 4s linear infinite;
+            animation-play-state: paused; }
           figure section article .inner .pic .dot {
             width: 3vw;
             height: 3vw;
@@ -95,10 +100,8 @@ figure {
             position: relative;
             z-index: 3;
             box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2); }
-          figure section article .inner .pic.on::before {
-            animation: rotation2 4s linear infinite; }
-          figure section article .inner .pic.on::after {
-            animation: rotation 4s linear infinite; }
+          figure section article .inner .pic.on::before, figure section article .inner .pic.on::after {
+            animation-play-state: running; }
 @keyframes rotation {
   0% {
     transform: rotate(0deg); }

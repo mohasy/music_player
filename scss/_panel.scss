@@ -50,11 +50,19 @@ section {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
+                    
                 }
 
                 &::before {
                     transform: translateY(10%);
                     filter: blur(20px) brightness(1.6);
+                    animation: rotation2 4s linear infinite;
+                    animation-play-state: paused;
+                }
+
+                &::after {
+                    animation: rotation 4s linear infinite;
+                    animation-play-state: paused;
                 }
 
                 .dot {
@@ -67,11 +75,8 @@ section {
                 }
 
                 &.on {
-                    &::before {
-                        animation: rotation2 4s linear infinite;
-                    }
-                    &::after {
-                        animation: rotation 4s linear infinite;
+                    &::before, &::after  {
+                        animation-play-state: running;
                     }
                 }
 
